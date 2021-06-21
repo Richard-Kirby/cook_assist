@@ -1,0 +1,1 @@
+from thermocoupler.temperature import Thermocouple
