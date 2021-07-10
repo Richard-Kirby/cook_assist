@@ -1,0 +1,15 @@
+Description="Thermocouple"
+Wants=network.target
+After=syslog.target network-online.target
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/usr/bin/sudo /usr/bin/python3 -u /home/pi/cook_assist/main.py
+WorkingDirectory=/home/pi/cook_assist
+Restart=on-failure
+RestartSec=10
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

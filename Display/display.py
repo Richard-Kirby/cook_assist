@@ -82,7 +82,7 @@ class Screen(threading.Thread):
                 temp_str = self.temp_queue.get_nowait()
 
             if temp_str is not None:
-                self.write_text(temp_str, "Verdana.ttf", 40, XLoc=0, YLoc=10)
+                self.write_text(temp_str, "/home/pi/cook_assist/Verdana.ttf", 40, XLoc=0, YLoc=10)
 
 
 # Press the green button in the gutter to run the script.
@@ -93,8 +93,8 @@ if __name__ == '__main__':
     screen.clear()
 
     # Putting start up.
-    screen.write_text("Cook Assist", "Verdana.ttf", 14)
-    screen.write_text("900C", "Verdana.ttf", 40, XLoc=0, YLoc=10)
+    screen.write_text("Cook Assist", "¬/cook_assist/Verdana.ttf", 14)
+    screen.write_text("Starting...", "¬/cook_assist/Verdana.ttf", 40, XLoc=0, YLoc=10)
 
     screen.start()
 
